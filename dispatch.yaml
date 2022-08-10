@@ -1,0 +1,6 @@
+dispatch:
+- url: "*/hello1"
+  service: hello1-service
+
+- url: "*/hello2"
+  service: hello2-service

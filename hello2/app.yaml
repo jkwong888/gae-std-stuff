@@ -1,0 +1,4 @@
+runtime: go115
+
+main: main.go
+service: hello2-service
