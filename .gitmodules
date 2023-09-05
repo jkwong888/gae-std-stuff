@@ -1,3 +1,6 @@
 [submodule "gcp-helloweb"]
 	path = gcp-helloweb
 	url = git@github.com:jkwong888/gcp-helloweb
+[submodule "default/dynamic-page"]
+	path = default/dynamic-page
+	url = git@github.com:vusimb313/dynamic-page.git
