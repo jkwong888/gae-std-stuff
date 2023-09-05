@@ -19,11 +19,10 @@ variable "billing_account_id" {
 }
 
 variable "organization_id" {
-  default = "614120287242" // jkwng.altostrat.com
-}
+  default = "" 
 
 variable "service_project_parent_folder_id" {
-  default = "297737034934" // dev
+  default = ""
 }
 
 variable "service_project_id" {
