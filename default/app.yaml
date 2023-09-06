@@ -7,7 +7,6 @@ handlers:
   static_files: dynamic-page/index.html
   upload: dynamic-page/index.html
 
-
 - url: /css
   static_dir: dynamic-page/css
 
@@ -18,10 +17,6 @@ handlers:
   static_dir: dynamic-page/img
 
 - url: /.*
-  static_dir: dynamic-page
-
-
-- url: /.*
   secure: always
-  redirect_http_response_code: 302
-  script: auto
+  redirect_http_response_code: 301
+  static_dir: dynamic-page

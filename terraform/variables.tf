@@ -30,18 +30,36 @@ variable "service_project_id" {
   description = "The ID of the service project which hosts the project resources e.g. dev-55427"
 }
 
-variable "shared_vpc_host_project_id" {
-  description = "The ID of the host project which hosts the shared VPC e.g. shared-vpc-host-project-55427"
+variable "dns_project_id" {
+  description = "The project ID with the Cloud DNS zone"
 }
 
 variable "service_project_apis_to_enable" {
   type = list(string)
   default = [
-    "container.googleapis.com",
-    "compute.googleapis.com",
+    "appengine.googleapis.com",
+    "iap.googleapis.com",
   ]
+}
+
+variable "shared_vpc_host_project_id" {
+  description = "The ID of the host project which hosts the shared VPC e.g. shared-vpc-host-project-55427"
 }
 
 variable "shared_vpc_network" {
   description = "The ID of the shared VPC e.g. shared-network"
+}
+
+
+variable "dns_name" {
+}
+
+variable "dns_zone" {
+}
+
+variable "app_engine_location" {
+  default = "us-central"
+}
+
+variable "app_engine_iap_domain" {
 }

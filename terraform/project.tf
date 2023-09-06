@@ -7,8 +7,19 @@ data "google_compute_network" "shared_vpc" {
   project = data.google_project.host_project.project_id
 }
 
+data "google_project" "dns_project" {
+  project_id = var.dns_project_id
+}
+
 resource "random_id" "random_suffix" {
   byte_length = 2
+}
+
+resource "google_project_service" "certificatemanager_project_api" {
+  project                    = module.service_project.project_id
+  service                    = "certificatemanager.googleapis.com"
+  disable_on_destroy         = false
+  disable_dependent_services = false
 }
 
 module "service_project" {
